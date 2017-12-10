@@ -1,4 +1,4 @@
-/* remove bootstrap gutter*/
+
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0;
@@ -16,7 +16,7 @@
 }
 
 .img-featured-container .img-backdrop {
-  background: linear-gradient(135deg, rgba(38, 163, 255, 0.85), rgba(83, 201, 179, 0.85));
+  background: linear-gradient(135deg, rgba(255, 38, 38, 0.85), rgba(201, 83, 83, 0.85));
   margin: 0;
   padding: 0;
   width: 100%;
@@ -34,8 +34,7 @@
 /* center text horizontally and vertically on image hover */
 .img-featured-container .description-container {
   color: #fff;
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 12px;
   padding: 0 30px;
   text-align: center;
   line-height: 20px;
@@ -65,18 +64,11 @@
 
 .img-featured-container .description-container .caption {
   display: none;
-  margin-bottom: 10px;
 }
 
-.img-featured-container .description-container .likes,
-.img-featured-container .description-container .comments {
-  margin: 0 5px;
-}
 
 /* load more button */
 #btn-instafeed-load {
-  color: #fff;
-  background: #26a3ff;
   font-size: 16px;
   margin: 20px auto;
   padding: 8px 40px;

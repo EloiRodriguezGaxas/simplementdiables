@@ -32,14 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
     accessToken: "2708246576.8015660.730b0378941a4bd6a5c0f7e30aee912a",
     resolution: "standard_resolution",
     limit: 6,
-   /* template: '<div class="gallery">' +
+    /*template: '<div class="gallery">' +
                 '<a target="_blank" href="{{link}}">' +
-                  '<img src="{{image}}" alt="Trolltunga Norway" width="300" height="200">' +
+                  '<img src="{{image}}" width="300" height="200">' +
                 '</a>' +
-                '<div class="desc"><p>{{caption}}</p></div>' +
               '</div>'
               ,*/
-    template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+    template: '<div class="col-lg-4"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p></div><img src="{{image}}" class="img-responsive"></div></a></div>',
     target: "instafeed-gallery-feed",
     after: function () {
       // disable button if no more results to load
