@@ -1,84 +1,48 @@
-
-.row.no-gutter {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.row.no-gutter [class*='col-']:not(:first-child),
-.row.no-gutter [class*='col-']:not(:last-child) {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.img-featured-container img {
-  width: 100%;
-/*   padding: 10px; */
-}
-
-.img-featured-container .img-backdrop {
-  background: linear-gradient(135deg, rgba(255, 38, 38, 0.85), rgba(201, 83, 83, 0.85));
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.img-featured-container:hover > .img-backdrop {
-  opacity: 1;
-}
-
-/* center text horizontally and vertically on image hover */
-.img-featured-container .description-container {
-  color: #fff;
-  font-size: 12px;
-  padding: 0 30px;
+.container-insta {
+  max-width: 75% !important;
   text-align: center;
-  line-height: 20px;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-style: preserve-3d;
-  z-index: 2;
-  opacity: 0;
-  transition: all .2s ease;
 }
 
-.img-featured-container .description-container .fa-instagram {
-  font-size: 40px;
+.row-insta {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
-.img-featured-container .description-container p {
-  font-weight: 300;
-  margin-bottom: 0;
+/* Create four equal columns that sits next to each other */
+.column-insta {
+  -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 10px;
 }
 
-.img-featured-container:hover .description-container {
-  opacity: 1;
+.column-insta img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
 
-.img-featured-container .description-container .caption {
-  display: none;
+.column-insta img:hover {
+  -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(90%);
 }
 
-
-/* load more button */
-#btn-instafeed-load {
-  font-size: 16px;
-  margin: 20px auto;
-  padding: 8px 40px;
-  display: block;
-  border: none;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column-insta {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+  }
 }
 
-/* media queries  */
-@media screen and (min-width:768px) {
-  .img-featured-container .description-container .caption {
-    display: block;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column-insta {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
   }
 }
