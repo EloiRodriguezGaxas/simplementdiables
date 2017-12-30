@@ -1,31 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /*
-    var insta = new Instafeed({
-      get: 'user',
-      userId: '2708246576',
-      clientId: '801566096fac4a2c9774644caea82ae4',
-      accessToken: '2708246576.8015660.730b0378941a4bd6a5c0f7e30aee912a',
-      resolution: 'standard_resolution',
-      sortBy: 'most-recent',
-      useHttp: "true",
-      limit: 6,
-      template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{image}}"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i> {{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span></div><img src="{{image}}" class="img-responsive"></div></a></div>',
-      sortBy: 'most-recent',
-  
-      filter: function (image) {
-        return image.type === 'image';
-      },
-  
-      after: function () {
-        loader.style.display = 'none';
-        if (!this.hasNext()) {
-          loadButton.setAttribute('disabled', 'disabled');
-        }
-      }
-    });
-  
-    insta.run();
-  */
   var galleryFeed = new Instafeed({
     get: "user",
     userId: 2708246576,
@@ -33,10 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
     resolution: "standard_resolution",
     limit: 6,
     template: '<div class="column-insta">' +
-                '<a target="_blank" href="{{link}}">' +
+                '<a href="#" data-toggle="modal" data-target="{{id}}">' +
                   '<img src="{{image}}" style="width:100%">' +
                 '</a>' +
-              '</div>'
+              '</div>' +
+              '<div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">' +
+              '<div class="modal-dialog" role="document">' +
+                '<div class="modal-content">' +
+                  '<div class="modal-header">' +
+                    '<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>' +
+                    '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                      '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                  '</div>' +
+                  '<div class="modal-body">' +
+                   ' ... ' +
+                  '</div>' +
+                  '<div class="modal-footer">' +
+                    '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>' +
+                    '<button type="button" class="btn btn-primary">Save changes</button>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
               ,
    // template: '<div class="column"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p></div><img src="{{image}}" class="img-responsive"></div></a></div>',
     target: "instafeed-gallery-feed",
@@ -55,3 +47,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
