@@ -1,84 +1,112 @@
-
-.row.no-gutter {
-  margin-left: 0;
-  margin-right: 0;
+.image-wrapper {
+text-align: center;
+background: rgba(0, 0, 0);
+color: azure;
+content:"\e003";
+font-family: 'Glyphicons Halflings';
 }
 
-.row.no-gutter [class*='col-']:not(:first-child),
-.row.no-gutter [class*='col-']:not(:last-child) {
-  padding-right: 0;
-  padding-left: 0;
+.image-wrapper img {
+opacity: 1;
+-webkit-transition: .3s ease-in-out;
+transition: .5s ease-in-out;
+vertical-align: middle;
 }
 
-.img-featured-container img {
-  width: 100%;
-/*   padding: 10px; */
+.image-wrapper:hover img {
+opacity: .2;
 }
-
-.img-featured-container .img-backdrop {
-  background: linear-gradient(135deg, rgba(255, 38, 38, 0.85), rgba(201, 83, 83, 0.85));
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.img-featured-container:hover > .img-backdrop {
-  opacity: 1;
-}
-
-/* center text horizontally and vertically on image hover */
-.img-featured-container .description-container {
-  color: #fff;
-  font-size: 12px;
-  padding: 0 30px;
-  text-align: center;
-  line-height: 20px;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-style: preserve-3d;
-  z-index: 2;
-  opacity: 0;
-  transition: all .2s ease;
-}
-
-.img-featured-container .description-container .fa-instagram {
-  font-size: 40px;
-}
-
-.img-featured-container .description-container p {
-  font-weight: 300;
-  margin-bottom: 0;
-}
-
-.img-featured-container:hover .description-container {
-  opacity: 1;
-}
-
-.img-featured-container .description-container .caption {
-  display: none;
+.image-wrapper:hover img {
+    opacity: .2;
+    }
+#image-icon {
+    color: white;
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: inherit;
 }
 
 
-/* load more button */
-#btn-instafeed-load {
-  font-size: 16px;
-  margin: 20px auto;
-  padding: 8px 40px;
-  display: block;
-  border: none;
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
-/* media queries  */
-@media screen and (min-width:768px) {
-  .img-featured-container .description-container .caption {
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
     display: block;
-  }
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 55px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
