@@ -151,47 +151,6 @@ h4,
     z-index: 9;
 }
 
-.navbar {
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 4px;
-    opacity: 0.8;
-}
-
-.navbar li a,
-.navbar .navbar-brand {
-    color: #d5d5d5 !important;
-}
-
-.navbar-nav li a:hover {
-    color: #fff !important;
-}
-
-.navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #29292c !important;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-}
-
-.open .dropdown-toggle {
-    color: #fff;
-    background-color: #555 !important;
-}
-
-.dropdown-menu li a {
-    color: #000 !important;
-}
-
-.dropdown-menu li a:hover {
-    background-color: red !important;
-}
-
 .form-control {
     border-radius: 10px;
     border: 2px solid black;
@@ -294,7 +253,7 @@ footer.content-info #social .icon{
     -webkit-transition:all .2s ease-in-out .05s;
     -o-transition:all .2s ease-in-out .05s;
     transition:all .2s ease-in-out .05s;
-    border: 2px solid #740403;
+    border: 2px solid #ce1b0b;
     border-radius: 50%;
     height: 45px;
     width: 45px;
@@ -307,7 +266,7 @@ footer.content-info #social .icon .social-icon{
 }
 footer.content-info #social .icon:hover{
     top:-3px;
-    background: #74050371;
+    background: #740503ce;
 }
 footer.content-info .text-center {
     font-size: 25px;
@@ -316,3 +275,9 @@ footer.content-info .text-center {
 footer.content-info .text-center .up-arrow:hover {
     color:#ec594d;
 }
+
+
+
+
+
+

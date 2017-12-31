@@ -1,50 +1,75 @@
+var galleryFeed;
+
 document.addEventListener("DOMContentLoaded", function () {
-  var galleryFeed = new Instafeed({
+
+
+  var feedHTML =
+    '{{model.customTagOpen}}' +
+      '<div class="w3-padding-16">' +
+        '<div class="image-wrapper">' +
+          '<a onclick="openModal({{model.customId}})">' +
+            '<img src="{{image}}" style="width:100%">' +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+    '{{model.customTagClose}}'+
+    '<!-- The Modal -->' +
+    '<div id="{{model.customId}}" class="modal">' +
+      '<span onclick="closeModal({{model.customId}})" class="close">&times;</span>' +
+      '<img src="{{image}}" class="modal-content">' +
+      '<div id="caption">' +
+        '{{caption}}' +
+      '</div>' +
+    '</div>'
+    ;
+
+
+  //var feedHTML = '{{model.customTagOpen}}<a target="_Blank" href="{{link}}"><img src="{{image}} style="width:100%" ></a>{{model.customTagClose}}';
+
+  var count = 0;
+
+  galleryFeed = new Instafeed({
     get: "user",
     userId: 2708246576,
     accessToken: "2708246576.8015660.730b0378941a4bd6a5c0f7e30aee912a",
     resolution: "standard_resolution",
-    limit: 6,
-    template: '<div class="column-insta">' +
-                '<a href="#" data-toggle="modal" data-target="{{id}}">' +
-                  '<img src="{{image}}" style="width:100%">' +
-                '</a>' +
-              '</div>' +
-              '<div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">' +
-              '<div class="modal-dialog" role="document">' +
-                '<div class="modal-content">' +
-                  '<div class="modal-header">' +
-                    '<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>' +
-                    '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
-                      '<span aria-hidden="true">&times;</span>' +
-                    '</button>' +
-                  '</div>' +
-                  '<div class="modal-body">' +
-                   ' ... ' +
-                  '</div>' +
-                  '<div class="modal-footer">' +
-                    '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>' +
-                    '<button type="button" class="btn btn-primary">Save changes</button>' +
-                  '</div>' +
-                '</div>' +
-              '</div>' +
-            '</div>'
-              ,
-   // template: '<div class="column"><a href="{{link}}" target="_blank"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p></div><img src="{{image}}" class="img-responsive"></div></a></div>',
+    limit: 3,
+
+    template: feedHTML,
     target: "instafeed-gallery-feed",
-    after: function () {
-      // disable button if no more results to load
-      if (!this.hasNext()) {
-        btnInstafeedLoad.setAttribute('disabled', 'disabled');
+    filter: function (image) {
+        image.customId = "image_" + count;
+      if (count % 3 === 0 || count === 0) {
+        image.customTagOpen = '<div class="w3-third">';
+        image.customTagClose = '';
+      } else if (count + 1 % 3 === 0) {
+        image.customTagOpen = '';
+        image.customTagClose = '</div>';
+      } else {
+        image.customTagOpen = '';
+        image.customTagClose = '';
       }
+      count += 1;
+      return true;
     },
+    after: function() {
+      if(count<9) {
+        galleryFeed.next();
+      }
+    }
+
   });
+
   galleryFeed.run();
 
-  var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-  btnInstafeedLoad.addEventListener("click", function () {
-    galleryFeed.next()
-  });
 
 });
 
+function openModal(image_id) {
+  console.log(image_id.id)
+  document.getElementById(image_id.id).style.display = "block";
+}
+
+function closeModal(image_id) {
+  document.getElementById(image_id.id).style.display = "none";
+}
