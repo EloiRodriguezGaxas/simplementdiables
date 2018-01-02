@@ -75,7 +75,7 @@
 
     <div id="vid" class="container-vid text-center">
         <div class="cover">
-            <h1 class="w3-center w3-padding-large w3-black w3-xxlarge w3-wide w3-animate-opacity hi">SIMPLEMENT DIABLES</h1>
+            <h1 class="w3-center w3-padding-large w3-wide w3-animate-opacity hi" style="font-size:76px;">SIMPLEMENT DIABLES</h1>
             <div class="tv">
                 <div class="screen mute" id="tv"></div>
             </div>
@@ -117,8 +117,8 @@
 -->
     <!-- Container (colla Section) -->
     <div class="container text-center bg-1">
-        <p>
-            <em>Aquesta nit dormirem a l'infern!</em>
+        <p class="w3-xlarge w3-text-white w3-wide">
+            Us rebem amb foc i pólvora!
         </p>
         <p>
             Maecenas mollis mi rhoncus lectus ornare, rutrum efficitur eros volutpat. Vestibulum consectetur, orci sit amet congue sollicitudin,
@@ -140,38 +140,59 @@
         </p>
     </div>
 
-    <!-- Event Parallax Image -->
-    <div id="adults" class="bgimg-2 w3-display-container w3-opacity-min">
-        <div class="w3-display-middle text-center">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity hi">COLLA ADULTA</span>
+    <!-- Section Diables Adults -->
+    <div id="adults" class="bg-contc w3-display-container">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">DIABLES ADULTS</span>
         </div>
     </div>
 
-    <!-- Container (Adults Section) -->
-    <div class="container text-center">
-        <p>
-            El 14 de març de 1996 és va fundar la colla. Al 2016 la colla celebrarà els 20 anys!! Els diables de Premià de Mar, els Simplement
-            Diables, van vermells i negres, amb la seva casulla amb llarga caputxa en punxa.
-        </p>
-        <br>
-        <p>
-            Van acompanyats de la música dels tabalers en els seus cercaviles i correfocs. Fan correfocs (a vegades acompanyats del Gafarró,
-            la bèstia de foc) i espectacles visuals en places, per gaudir del foc des de fora. Els podeu veure a la nit de
-            foc del Rebombori, pel Correfoc i l’Eufòria de la Festa Major, i alguna altra festa o activitat puntual. També
-            fan sortides fora del poble.
-        </p>
-        <br>
-        <p>
-            Actualment hi ha una colla d’adults, una colla de malabars encarregats de fer els espectacles a les places, i una colla de
-            menuts..
-
-        </p>
+    <div class="bgimg-adults w3-display-container">
+        <div class="page-text">
+            <div class="section-title">
+                <div style="margin:5%;">
+                    <span class="w3-center">
+                        AQUESTA NIT DORMIREM A L'INFERN
+                    </span>
+                </div>
+            </div>
+            <div class="section-text">
+                <div style="margin:5%;">
+                    <span>
+                        Vestits de negre i vermell i capirotxe en punxa porten foc i festa en el correfoc de festa de major i la ceptroada.
+                        <br>
+                        <br> Formada per membres majors d’edat, venen plens de ganes porten la xerinola allà on van.
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Event Parallax Image -->
-    <div id="menuts" class="bgimg-menuts w3-display-container w3-opacity-min">
-        <div class="w3-display-middle text-center">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity hi">DIABLONS DE MAR</span>
+    <!-- Section Diables Adults -->
+    <div id="menuts" class="bg-contc w3-display-container">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">DIABLONS DE MAR</span>
+        </div>
+    </div>
+
+    <div class="bgimg-menuts w3-display-container">
+        <div class="page-text">
+            <div class="section-title">
+                <div style="margin:5%;">
+                    <span class="w3-center">
+                        AQUESTA NIT DORMIREM A L'INFERN
+                    </span>
+                </div>
+            </div>
+            <div class="section-text">
+                <div style="margin:5%;">
+                    <span>
+                        Vestits de negre i vermell i capirotxe en punxa porten foc i festa en el correfoc de festa de major i la ceptroada.
+                        <br>
+                        <br> Formada per membres majors d’edat, venen plens de ganes porten la xerinola allà on van.
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -259,7 +280,7 @@
 
     <!-- Container (Media Section) -->
     <div id="tour" class="w3-content" style="max-width:1500px">
-        <div >
+        <div>
             <div id="instafeed-gallery-feed" class="w3-row-padding w3-padding-24">
                 <!-- InstaFeed -->
             </div>
@@ -393,6 +414,48 @@
                 } // End if
             });
         })
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            //window and animation items
+            var animation_elements = $.find('.page-text');
+            var web_window = $(window);
+
+            //check to see if any animation containers are currently in view
+            function check_if_in_view() {
+                //get current window information
+                var window_height = web_window.height();
+                var window_top_position = web_window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                //iterate through elements to see if its in view
+                $.each(animation_elements, function () {
+
+                    //get the element sinformation
+                    var element = $(this);
+                    var element_height = $(element).outerHeight();
+                    var element_top_position = $(element).offset().top;
+                    var element_bottom_position = (element_top_position + element_height);
+
+                    //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+                    if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                        setTimeout(function () { element.addClass('in-view'); }, 500);
+                    } else {
+
+                    }
+                });
+
+            }
+
+            //on or scroll, detect elements in view
+            $(window).on('scroll resize', function () {
+                check_if_in_view()
+            })
+            //trigger our scroll event on initial load
+            $(window).trigger('scroll');
+
+        });
     </script>
 
 </body>

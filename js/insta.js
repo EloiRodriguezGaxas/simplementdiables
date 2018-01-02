@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     '<!-- The Modal -->' +
     '<div id="{{model.customId}}" class="modal">' +
       '<span onclick="closeModal({{model.customId}})" class="close">&times;</span>' +
-      '<img src="{{image}}" class="modal-content">' +
+      '<a target="_blank" href="{{link}}">' +
+        '<img src="{{image}}" class="modal-content">' +
+      '</a>' +
       '<div id="caption">' +
         '{{caption}}' +
       '</div>' +

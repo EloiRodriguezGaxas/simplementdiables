@@ -1,8 +1,8 @@
 body {
     font: 400 15px/1.8 Lato;
     font-family: 'Roboto Mono', monospace;
-    color: rgb(182, 180, 180);
-    background: #571512;
+    color: rgb(20, 19, 19);
+    background: #d6aeac;
 }
 
 h3,
@@ -18,29 +18,82 @@ h4 {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-gafarro, .bgimg-menuts {
-    background-attachment: fixed;
+.bgimg-1, .bgimg-2, .bgimg-gafarro, .bgimg-menuts, .bgimg-adults {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-menuts {
-        background-attachment: fixed;
-    }
-}
+
 .bgimg-menuts {
     background-image: url("img/menuts-bg.jpg");
-    min-height: 400px;
+    min-height: 100vh;
+    position: relative;
+    opacity: 0.8;
 }
 .bgimg-gafarro {
     background-image: url("img/gafarro-bg.jpg");
-    min-height: 400px;
+    min-height: 100vh;
+    position: relative;
+    opacity: 0.8;
 }
-.bgimg-2 {
+.bgimg-adults {
+    background-color: rgba(0,0,0,0.8);
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url("img/adults-bg.jpg");
+}
+.bgimg-1 {
     background-image: url("img/esdeveniments-bg.jpg");
-    min-height: 400px;
+    min-height: 100vh;
+    position: relative;
 }
+
+.page-text {
+    top: 10%;
+    position: absolute;
+    width: 30%;
+    left: -650px;
+    transition: 1s;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 0 10px 10px 0;
+}
+.section-title {
+    opacity: 1 !important;
+    width: 100%;
+    background: #000000a8;
+    transition: 1s;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 0 10px 10px 0;
+}
+.section-text {
+    margin-left: 5%;
+    width: 100%;
+    background: #b4130b9f;
+    transition: 1s;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: justify !important;
+}
+.in-view {
+    transform: translateX(650px);
+    animation: come-in 0.8s ease forwards;
+}
+
+@media (max-width: 700px) {
+    .page-text {
+        width: 70%;
+    }
+    .section-title {
+        font-size: 14px;
+    }
+    .section-text {
+        font-size: 12px;
+    }
+}
+
 
 .bg-contc {
     background: rgb(0, 0, 0);
@@ -62,7 +115,7 @@ h4 {
 .container-vid {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     bottom: 0;
 }
 
@@ -154,7 +207,7 @@ h4,
 .form-control {
     border-radius: 10px;
     border: 2px solid black;
-    background: #640502;
+    background: #b4504c;
     color: #c2c2c2;
 }
 
@@ -170,12 +223,12 @@ textarea {
 
 .form-bg {
     border-radius: 10px;
-    background: #410e0c;
+
 }
 
 .form-control:focus {
     border: 3px solid #555;
-    background: #740403;
+    background: #9b5f5e;
     color: white;
 }
 .btn {
@@ -281,3 +334,17 @@ footer.content-info .text-center .up-arrow:hover {
 
 
 
+
+
+
+
+
+.bg-colla {
+    /* The image used */
+    background-image: url("img/gafarro-bg.jpg");
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
