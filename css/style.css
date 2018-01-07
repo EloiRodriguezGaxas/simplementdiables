@@ -37,15 +37,16 @@ h4 {
     opacity: 0.8;
 }
 .bgimg-adults {
-    background-color: rgba(0,0,0,0.8);
-    min-height: 100vh;
+    background-image: url("img/adults-bg.jpg");
+    min-height: 85vh;
     position: relative;
-    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url("img/adults-bg.jpg");
+    opacity: 0.8;
 }
 .bgimg-1 {
     background-image: url("img/esdeveniments-bg.jpg");
     min-height: 100vh;
     position: relative;
+    opacity: 0.8;
 }
 
 .page-text {
@@ -97,7 +98,7 @@ h4 {
 
 .bg-contc {
     background: rgb(0, 0, 0);
-    min-height: 250px;
+    min-height: 15vh;
 }
 
 .container {
