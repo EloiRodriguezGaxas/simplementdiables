@@ -24,59 +24,66 @@
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <div id="main-down" class="nav-up">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#myPage">SD</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#myPage">Inici</a>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui som?
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#colla">La colla</a>
-                                </li>
-                                <li>
-                                    <a href="#adults">Adults</a>
-                                </li>
-                                <li>
-                                    <a href="#menuts">Menuts</a>
-                                </li>
-                                <li>
-                                    <a href="#malabars">In-Flamats</a>
-                                </li>
-                                <li>
-                                    <a href="#gafarro">Gafarró</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#tour">Media</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contacte</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#myPage">SD</a>
             </div>
-        </nav>
-    </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#myPage">Inici</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui som?
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#colla">La colla</a>
+                            </li>
+                            <li>
+                                <a href="#adults">Adults</a>
+                            </li>
+                            <li>
+                                <a href="#menuts">Menuts</a>
+                            </li>
+                            <li>
+                                <a href="#malabars">In-Flamats</a>
+                            </li>
+                            <li>
+                                <a href="#gafarro">Gafarró</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tour">Media</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contacte</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 
     <div id="vid" class="container-vid text-center">
         <div class="cover">
-            <h1 class="w3-center w3-padding-large w3-wide w3-animate-opacity hi" style="font-size:76px;">SIMPLEMENT DIABLES</h1>
+            <h1 class="w3-center w3-padding-large hi" style="font-size: 4.5em;">
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters letters-left">Signal</span>
+                    <span class="letters ampersand">&amp;</span>
+                    <span class="letters letters-right">Noise</span>
+                    <span class="line line2"></span>
+                </span>
+            </h1>
             <div class="tv">
                 <div class="screen mute" id="tv"></div>
             </div>
@@ -256,10 +263,10 @@
         </div>
     </div>
 
-    <!-- Event Parallax Image -->
-    <div id="events" class="bg-contc w3-display-container w3-opacity-min">
+    <!-- Section Media -->
+    <div id="events" class="bg-contc w3-display-container">
         <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">Media</span>
+            <span class="w3-xxlarge w3-text-white w3-wide">MEDIA</span>
         </div>
     </div>
 
@@ -272,10 +279,10 @@
         </div>
     </div>
 
-    <!-- Contact Parallax Image -->
-    <div id="contact" class="bg-contc w3-display-container w3-opacity-min">
+    <!-- Section Contact -->
+    <div id="contact" class="bg-contc w3-display-container">
         <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">Contacte</span>
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACTE</span>
         </div>
     </div>
 
@@ -305,7 +312,7 @@
                     <br>
                     <div class="row">
                         <div class="col-md-12 form-group">
-                            <button class="btn pull-right" type="submit">Enviar</button>
+                            <button class="btn pull-right" type="submit" style="width:100%;">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -368,6 +375,48 @@
 
     <script src="js/lib/instafeed.min.js"></script>
     <script src="js/insta.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script>
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.hi .line',
+                opacity: [0.5, 1],
+                scaleX: [0, 1],
+                easing: "easeInOutExpo",
+                duration: 700
+            }).add({
+                targets: '.hi .line',
+                duration: 600,
+                easing: "easeOutExpo",
+                translateY: function (e, i, l) {
+                    var offset = -0.625 + 0.625 * 2 * i;
+                    return offset + "em";
+                }
+            }).add({
+                targets: '.hi .ampersand',
+                opacity: [0, 1],
+                scaleY: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            }).add({
+                targets: '.hi .letters-left',
+                opacity: [0, 1],
+                translateX: ["0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=300'
+            }).add({
+                targets: '.hi .letters-right',
+                opacity: [0, 1],
+                translateX: ["-0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            });
+    </script>
 
     <script>
 
@@ -441,48 +490,6 @@
             $(window).trigger('scroll');
 
         });
-    </script>
-
-    <script>
-
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5;
-        var navbarHeight = $('header').outerHeight();
-
-        $(window).scroll(function (event) {
-            didScroll = true;
-        });
-
-        setInterval(function () {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 250);
-
-        function hasScrolled() {
-            var st = $(this).scrollTop();
-
-            // Make sure they scroll more than delta
-            if (Math.abs(lastScrollTop - st) <= delta)
-                return;
-
-            // If they scrolled down and are past the navbar, add class .nav-up.
-            // This is necessary so you never see what is "behind" the navbar.
-            if (st > lastScrollTop && st > navbarHeight) {
-                // Scroll Down
-                $('nav').removeClass('nav-down').addClass('nav-up');
-            } else {
-                // Scroll Up
-                if (st + $(window).height() < $(document).height()) {
-                    $('nav').removeClass('nav-up').addClass('nav-down');
-                }
-            }
-
-            lastScrollTop = st;
-        }
-
     </script>
 
 </body>

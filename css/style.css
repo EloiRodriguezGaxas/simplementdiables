@@ -26,25 +26,26 @@ h4 {
 
 .bgimg-menuts {
     background-image: url("img/menuts-bg.jpg");
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     opacity: 0.8;
 }
 .bgimg-gafarro {
     background-image: url("img/gafarro-bg.jpg");
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     opacity: 0.8;
 }
 .bgimg-adults {
     background-image: url("img/adults-bg.jpg");
-    min-height: 85vh;
+    min-height: 80vh;
     position: relative;
     opacity: 0.8;
 }
+
 .bgimg-1 {
     background-image: url("img/esdeveniments-bg.jpg");
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     opacity: 0.8;
 }
@@ -95,16 +96,46 @@ h4 {
     }
 }
 
+@media (max-width: 1200px) {
+    .page-text {
+        width: 40%;
+    }
+    .section-title {
+        font-size: 14px;
+    }
+    .section-text {
+        font-size: 12px;
+    }
+}
+
 
 .bg-contc {
     background: rgb(0, 0, 0);
-    min-height: 15vh;
+    min-height: 20vh;
 }
 
 .container {
     width: 100% !important;
-    padding: 80px 180px;
+    padding: 80px 500px;
     position: relative;
+}
+
+@media (max-width: 1500px) {
+    .container {
+        padding: 80px 250px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 80px 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        padding: 80px 100px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -138,20 +169,6 @@ h4 {
         display: none;
         /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
-}
-
-.bg- {
-    background: #3a100e;
-    color: #d3d3d3;
-}
-
-.bg-1 h3 {
-    color: #fff;
-}
-
-.bg- {
-    background: #696565;
-    color: #1a1717;
 }
 
 .list-group-item:first-child {
@@ -200,16 +217,16 @@ h4,
 #map {
     width: 100%;
     height: 400px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%);
     z-index: 9;
 }
 
 .form-control {
     border-radius: 10px;
-    border: 2px solid black;
-    background: #b4504c;
-    color: #c2c2c2;
+    border: 2px solid rgb(110, 101, 101);
+    background: #e0d9d9;
+    color: #353131;
 }
 
 textarea {
@@ -219,7 +236,7 @@ textarea {
 .form-contact {
     width: 70%;
     height: 100%;
-    color: white !important;
+    color: rgb(41, 38, 38) !important;
 }
 
 .form-bg {
@@ -228,9 +245,9 @@ textarea {
 }
 
 .form-control:focus {
-    border: 3px solid #555;
-    background: #9b5f5e;
-    color: white;
+    border: 2px solid rgb(0, 0, 0);
+    background: #dfd3d3;
+    color: rgb(0, 0, 0);
 }
 .btn {
     background: #222;
@@ -330,22 +347,38 @@ footer.content-info .text-center .up-arrow:hover {
     color:#ec594d;
 }
 
-
-
-
-
-
-
-
-
-
-
-.bg-colla {
-    /* The image used */
-    background-image: url("img/gafarro-bg.jpg");
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+  
+  .hi .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+    line-height: 1em;
+  }
+  
+  .hi .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0.5 0;
+  }
+  
+  .hi .ampersand {
+    font-family: Baskerville, "EB Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    width: 1em;
+    margin-right: -0.1em;
+    margin-left: -0.1em;
+  }
+  
+  .hi .letters {
+    display: inline-block;
+    opacity: 0;
+  }
