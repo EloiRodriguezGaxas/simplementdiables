@@ -20,12 +20,12 @@ a {
   top: 35%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 4.5em;
   color: #fff;
-  font-family: 'Roboto Slab', serif;
+  font-family: Permanent Marker, sans-serif;
   text-align: center;
   z-index: 4;
   padding: 10px;
+  width: 100%;
   
 }
 

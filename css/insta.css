@@ -1,24 +1,27 @@
 .image-wrapper {
-text-align: center;
-background: rgba(0, 0, 0);
-color: azure;
-content:"\e003";
-font-family: 'Glyphicons Halflings';
+    text-align: center;
+    background: rgba(0, 0, 0);
+    color: azure;
+    content: "\e003";
+    font-family: 'Glyphicons Halflings';
+    margin: 10px;
 }
 
 .image-wrapper img {
-opacity: 1;
--webkit-transition: .3s ease-in-out;
-transition: .5s ease-in-out;
-vertical-align: middle;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
+    vertical-align: middle;
 }
 
 .image-wrapper:hover img {
-opacity: .2;
+    opacity: .2;
 }
+
 .image-wrapper:hover img {
     opacity: .2;
-    }
+}
+
 #image-icon {
     color: white;
     position: absolute;
@@ -32,23 +35,34 @@ opacity: .2;
 }
 
 
-
 /* The Modal (background) */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
 }
 
+
 /* Modal Content (image) */
+
 .modal-content {
     margin: auto;
     display: block;
@@ -56,7 +70,9 @@ opacity: .2;
     max-width: 700px;
 }
 
+
 /* Caption of Modal Image */
+
 #caption {
     margin: auto;
     display: block;
@@ -68,8 +84,11 @@ opacity: .2;
     height: 150px;
 }
 
+
 /* Add Animation */
-.modal-content, #caption {    
+
+.modal-content,
+#caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -77,16 +96,26 @@ opacity: .2;
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
 }
 
 @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
 }
 
+
 /* The Close Button */
+
 .close {
     position: absolute;
     top: 55px;
@@ -104,9 +133,59 @@ opacity: .2;
     cursor: pointer;
 }
 
+
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+
+@media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
+    }
+}
+
+#instafeed-gallery-feed {
+    /* Prevent vertical gaps */
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 3;
+    -moz-column-gap: 0px;
+    column-count: 3;
+    column-gap: 0px;
+}
+
+#instafeed-gallery-feed .image-wrapper img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 1200px) {
+    #instafeed-gallery-feed {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (max-width: 1000px) {
+    #instafeed-gallery-feed {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (max-width: 800px) {
+    #instafeed-gallery-feed {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    #instafeed-gallery-feed {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
     }
 }

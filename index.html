@@ -13,12 +13,16 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/w3.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/nabvar.css">
     <link rel="stylesheet" type="text/css" href="css/vid.css">
     <link rel="stylesheet" type="text/css" href="css/insta.css">
+
+
 
 </head>
 
@@ -75,13 +79,12 @@
 
     <div id="vid" class="container-vid text-center">
         <div class="cover">
-            <h1 class="w3-center w3-padding-large hi" style="font-size: 4.5em;">
+            <h1 class="w3-center hi ml11">
                 <span class="text-wrapper">
                     <span class="line line1"></span>
-                    <span class="letters letters-left">Signal</span>
-                    <span class="letters ampersand">&amp;</span>
-                    <span class="letters letters-right">Noise</span>
-                    <span class="line line2"></span>
+                    <span class="letters letters1">Simplement</span>
+                    <br>
+                    <span class="letters letters2"> Diables</span>
                 </span>
             </h1>
             <div class="tv">
@@ -125,27 +128,23 @@
 -->
     <!-- Container (colla Section) -->
     <div class="container text-center bg-1">
-        <p class="w3-xlarge w3-text-white w3-wide">
-            Us rebem amb foc i pólvora!
-        </p>
-        <p>
-            Maecenas mollis mi rhoncus lectus ornare, rutrum efficitur eros volutpat. Vestibulum consectetur, orci sit amet congue sollicitudin,
-            augue metus vehicula risus, ut fringilla mauris orci at urna. Cras ullamcorper eleifend lobortis. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce placerat ante et quam eleifend
-            tempor. Vivamus vel efficitur lorem, id rutrum mauris. Vestibulum ante ipsum primis in faucibus orci luctus et
-            ultrices posuere cubilia Curae; Nulla erat sapien, semper et tellus at, malesuada lacinia nunc. Proin luctus
-            pulvinar tortor, sed hendrerit diam hendrerit iaculis. Donec in augue diam. Phasellus orci velit, rhoncus ac
-            porta id, facilisis sit amet ex. Curabitur imperdiet odio ut risus dignissim, sit amet congue orci consectetur.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eget volutpat augue.
-            Aliquam tellus libero, cursus a imperdiet quis, efficitur at purus.
-        </p>
-        <br>
-        <p>
-            Donec vel egestas enim. In eros mi, pellentesque vel urna eu, elementum blandit lacus. Quisque massa est, commodo non vehicula
-            vitae, ultricies id lorem. Mauris vitae felis id leo rutrum viverra. Vestibulum ante ipsum primis in faucibus
-            orci luctus et ultrices posuere cubilia Curae; Nullam quam tortor, eleifend ac efficitur eu, sollicitudin nec
-            elit. Cras vitae consectetur orci.
-        </p>
+
+        <div class="text-left">
+            <p class="w3-xxlarge w3-wide">
+                Us rebem amb foc i pólvora!
+            </p>
+            <p>
+                Simplement Diables, la colla més diabòlica de Premià de Mar, neix el 1996. Durant tots aquests anys d’història, hem organitzat,
+                gaudit i participat en nombrosos correfocs; una de les festes més tradicionals, emocionants, vibrants i espectaculars
+                del nostre país!
+            </p>
+        </div>
+        <div class="text-right">
+            <p>
+                Els diables de Premià de Mar volem ser una colla referent, i per això us animem a ser partícips dels nostres espectacles
+                i del nostre correfoc encabits dins una de les Festes Majors més populars del Maresme, els "Pirates i Premianencs"!!
+            </p>
+        </div>
     </div>
 
     <!-- Section Diables Adults -->
@@ -272,10 +271,8 @@
 
     <!-- Container (Media Section) -->
     <div id="tour" class="w3-content" style="max-width:1500px">
-        <div>
-            <div id="instafeed-gallery-feed" class="w3-row-padding w3-padding-24">
-                <!-- InstaFeed -->
-            </div>
+        <div id="instafeed-gallery-feed" style="" class="w3-content">
+            <!-- InstaFeed -->
         </div>
     </div>
 
@@ -378,43 +375,42 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-    <script>
+
+    <script>  
+
+        $('.ml11 .letters').each(function () {
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+        });
         anime.timeline({ loop: false })
             .add({
-                targets: '.hi .line',
+                targets: '.ml11 .line',
+                scaleY: [0, 1],
                 opacity: [0.5, 1],
-                scaleX: [0, 1],
-                easing: "easeInOutExpo",
+                easing: "easeOutExpo",
                 duration: 700
-            }).add({
-                targets: '.hi .line',
-                duration: 600,
+            })
+            .add({
+                targets: '.ml11 .line',
+                translateX: [0, $(".ml11 .letters").width()],
                 easing: "easeOutExpo",
-                translateY: function (e, i, l) {
-                    var offset = -0.625 + 0.625 * 2 * i;
-                    return offset + "em";
+                duration: 700,
+                delay: 100
+            }).add({
+                targets: '.ml11 .letter',
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=775',
+                delay: function (el, i) {
+                    return 34 * (i + 1)
                 }
-            }).add({
-                targets: '.hi .ampersand',
-                opacity: [0, 1],
-                scaleY: [0.5, 1],
+            })
+            .add({
+                targets: '.line1',
+                opacity: 0,
+                duration: 1000,
                 easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=600'
-            }).add({
-                targets: '.hi .letters-left',
-                opacity: [0, 1],
-                translateX: ["0.5em", 0],
-                easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=300'
-            }).add({
-                targets: '.hi .letters-right',
-                opacity: [0, 1],
-                translateX: ["-0.5em", 0],
-                easing: "easeOutExpo",
-                duration: 600,
-                offset: '-=600'
+                delay: 1000
             });
     </script>
 
