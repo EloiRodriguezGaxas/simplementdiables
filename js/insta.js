@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var feedHTML =
     '{{model.customTagOpen}}' +
-      '<div class="w3-padding-16">' +
+      '<div class="">' +
         '<div class="image-wrapper">' +
           '<a onclick="openModal({{model.customId}})">' +
             '<img src="{{image}}" style="width:100%">' +
@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     '<!-- The Modal -->' +
     '<div id="{{model.customId}}" class="modal">' +
       '<span onclick="closeModal({{model.customId}})" class="close">&times;</span>' +
-      '<img src="{{image}}" class="modal-content">' +
+      '<a target="_blank" href="{{link}}">' +
+        '<img src="{{image}}" class="modal-content">' +
+      '</a>' +
       '<div id="caption">' +
         '{{caption}}' +
       '</div>' +
@@ -39,16 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
     target: "instafeed-gallery-feed",
     filter: function (image) {
         image.customId = "image_" + count;
-      if (count % 3 === 0 || count === 0) {
-        image.customTagOpen = '<div class="w3-third">';
-        image.customTagClose = '';
-      } else if (count + 1 % 3 === 0) {
-        image.customTagOpen = '';
-        image.customTagClose = '</div>';
-      } else {
-        image.customTagOpen = '';
-        image.customTagClose = '';
-      }
+      // if (count % 3 === 0 || count === 0) {
+      //   image.customTagOpen = '<div class="w3-third">';
+      //   image.customTagClose = '';
+      // } else if (count + 1 % 3 === 0) {
+      //   image.customTagOpen = '';
+      //   image.customTagClose = '</div>';
+      // } else {
+      //   image.customTagOpen = '';
+      //   image.customTagClose = '';
+      // }
       count += 1;
       return true;
     },
