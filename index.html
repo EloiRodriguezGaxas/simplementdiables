@@ -451,11 +451,13 @@
             //window and animation items
             var animation_elements = $.find('.page-text');
             var web_window = $(window);
+            console.log("Window: ", web_window);
 
             //check to see if any animation containers are currently in view
             function check_if_in_view() {
                 //get current window information
                 var window_height = web_window.height();
+                var percent_height = window_height*0.2;
                 var window_top_position = web_window.scrollTop();
                 var window_bottom_position = (window_top_position + window_height);
 
@@ -469,10 +471,11 @@
                     var element_bottom_position = (element_top_position + element_height);
 
                     //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
-                    if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
-                        setTimeout(function () { element.addClass('in-view'); }, 500);
+                    if ((element_bottom_position >= (window_top_position+percent_height)) && (element_top_position <= (window_bottom_position-percent_height))) {
+                        element.addClass('in-view');
+                        // setTimeout(function () { element.addClass('in-view'); }, 500);
                     } else {
-
+                        element.removeClass('in-view');
                     }
                 });
 
