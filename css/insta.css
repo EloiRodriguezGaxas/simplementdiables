@@ -5,6 +5,7 @@
     content: "\e003";
     font-family: 'Glyphicons Halflings';
     margin: 10px;
+    overflow: hidden;
 }
 
 .image-wrapper img {
@@ -15,11 +16,11 @@
 }
 
 .image-wrapper:hover img {
-    opacity: .2;
-}
-
-.image-wrapper:hover img {
-    opacity: .2;
+    opacity: 0.5;
+    cursor: pointer;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 #image-icon {
