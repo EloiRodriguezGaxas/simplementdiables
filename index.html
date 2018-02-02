@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/nabvar.css">
     <link rel="stylesheet" type="text/css" href="css/vid.css">
     <link rel="stylesheet" type="text/css" href="css/insta.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
 
 
 
@@ -75,7 +76,18 @@
             </div>
         </div>
     </nav>
-
+    <!-- <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div> -->
+    <div id="loader-wrapper">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
 
     <div id="vid" class="container-vid text-center">
         <div class="cover">
@@ -222,7 +234,8 @@
             <div class="section-text">
                 <div style="margin:5%;">
                     <span>
-                        Ens agrada el foc, ens agrada la flama! Ens agrada fer-la girar i fer-la saltar! Som els In-flamats, els malabars de foc de Simplement Diables.
+                        Ens agrada el foc, ens agrada la flama! Ens agrada fer-la girar i fer-la saltar! Som els In-flamats, els malabars de foc
+                        de Simplement Diables.
                         <br>
                         <br> Assagem els divendres i diumenges als vespres a Can Manent. Anima't, vine i participa!
                     </span>
@@ -416,8 +429,10 @@
     </script>
 
     <script>
-
         $(document).ready(function () {
+            setTimeout(function () {
+                $('body').addClass('loaded');
+            }, 3000);
             // Initialize Tooltip
             $('[data-toggle="tooltip"]').tooltip();
 
