@@ -18,7 +18,7 @@
 .spinner {
     width: 70px;
     height: 70px;
-    position: absolute;
+    position: fixed;
     margin: 100px auto;
     z-index: 1031;
     left: 0;
