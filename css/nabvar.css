@@ -1,6 +1,12 @@
 .navbar-default {
   background-color: #3e3e4369;
   border-color: #29292c00;
+  top: 0 !important;
+  -webkit-transition: top 2s; /* For Safari 3.1 to 6.0 */
+  transition: top 2s;
+}
+.hide-nav {
+  top: -45px !important;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
