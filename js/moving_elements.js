@@ -2,7 +2,27 @@ $(document).ready(function () {
 
     //window and animation items
     var web_window = $(window);
-    var animate = true;
+    var adults_animate = true;
+    var diablons_animate = true;
+    var flamats_animate = true;
+    var gafarro_animate = true;
+
+    function animateText(text_to_find) {
+        $(text_to_find + ' .ml3').each(function () {
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+        });
+
+        anime.timeline({ loop: false })
+            .add({
+                targets: text_to_find + ' .ml3 .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 1000,
+                delay: function (el, i) {
+                    return 150 * (i + 1)
+                }
+            });
+    }
 
     //check to see if any animation containers are currently in view
     function check_if_in_view(text_to_find) {
@@ -28,40 +48,51 @@ $(document).ready(function () {
             //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
             if ((element_bottom_position >= (window_top_position + percent_height_top)) && (element_top_position <= (window_bottom_position - percent_height_bottom))) {
                 element.addClass('in-view');
-                console.log(animate);
-                if (animate) {
-                    animate = false;
-                    $(text_to_find + ' .ml3').each(function () {
-                        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-                    });
 
-                    anime.timeline({ loop: false })
-                        .add({
-                            targets: text_to_find + ' .ml3 .letter',
-                            opacity: [0, 1],
-                            easing: "easeInOutQuad",
-                            duration: 1250,
-                            delay: function (el, i) {
-                                return 150 * (i + 1)
-                            }
-                        });
+                switch (text_to_find) {
+                    case '#adults_page_text':
+                        if (adults_animate) {
+                            animateText(text_to_find);
+                            adults_animate = false;
+                        }
+                        break;
+                    case '#diablons_page_text':
+                        if (diablons_animate) {
+                            animateText(text_to_find);
+                            diablons_animate = false;
+                        }
+                        break;
+                    case '#flamats_page_text':
+                        if (flamats_animate) {
+                            animateText(text_to_find);
+                            flamats_animate = false;
+                        }
+                        break;
+                    case '#gafarro_page_text':
+                        if (gafarro_animate) {
+                            animateText(text_to_find);
+                            gafarro_animate = false;
+                        }
+                        break;
                 }
+
                 // setTimeout(function () { element.addClass('in-view'); }, 500);
             } else {
                 element.removeClass('in-view');
-                animate = true;
-                // $('.ml3').each(function () {
-                //     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-                // });
-
-                // anime.timeline({ loop: false })
-                //     .add({
-                //         targets: '.ml3',
-                //         opacity: 0,
-                //         duration: 1000,
-                //         easing: "easeOutExpo",
-                //         delay: 1000
-                //     });
+                switch (text_to_find) {
+                    case '#adults_page_text':
+                            adults_animate = true;
+                        break;
+                    case '#diablons_page_text':
+                            diablons_animate = true;
+                        break;
+                    case '#flamats_page_text':
+                            flamats_animate = true;
+                        break;
+                    case '#gafarro_page_text':
+                            gafarro_animate = true;
+                        break;
+                }
             }
         });
 
