@@ -295,37 +295,40 @@
 
     <!-- Container (Contact Section) -->
     <div class="w3-content container-contact bg-2">
-        <p class="text-center">
-            <em>
-                Vols un espectacle? Un intercanvi? Entrar en la colla?
-                <br> T'hi esperem!
-            </em>
-        </p>
 
-        <div class="w3-padding-large w3-padding-32 w3-margin-top form-bg">
-
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSea7rn4cdBaG185aOx2H-k_BGKrkJTAexoq2JqcAJaCxddHrw/formResponse" target="_blank">
-
-                <div class="text-center">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="entry.449687425" placeholder="Nom" type="text" required>
+        <div style="margin:8% 0 8% 0;">
+            <p class="text-center">
+                <em>
+                    Vols un espectacle? Un intercanvi? Entrar en la colla?
+                    <br> T'hi esperem!
+                </em>
+            </p>
+            <aside class="q-question">
+                    <h3>No tinguis por! No mosseguem, només cremem!</h3>
+                    <p>Intentarem respondre el més aviat possible. Moltes gràcies per tot!</p>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSea7rn4cdBaG185aOx2H-k_BGKrkJTAexoq2JqcAJaCxddHrw/formResponse" target="_blank">
+        
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="name" name="entry.449687425" placeholder="Nom" type="text" required>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="email" name="entry.507052164" placeholder="Correu" type="email" required>
+                                </div>
+                            </div>
+                            <textarea class="form-control" id="comments" name="entry.701097584" placeholder="Comentari" rows="5"></textarea>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <button class="btn pull-right" type="submit" style="width:100%;">Enviar</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="entry.507052164" placeholder="Correu" type="email" required>
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="comments" name="entry.701097584" placeholder="Comentari" rows="5"></textarea>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <button class="btn pull-right" type="submit" style="width:100%;">Enviar</button>
-                        </div>
-                    </div>
-                </div>
-
-            </form>
-
+        
+                    </form>
+                </aside>
+            <button class="clickr">Contacte!</button>
         </div>
     </div>
 
@@ -387,6 +390,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="js/moving_elements.js"></script>
 
+    <script>
+        $('.q-question').hide();
+
+        $('.clickr').click(function () {
+            $('.q-question').slideToggle();
+        });
+    </script>
 
     <script>  
 
