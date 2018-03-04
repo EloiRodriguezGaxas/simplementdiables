@@ -76,10 +76,7 @@
             </div>
         </div>
     </nav>
-    <!-- <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
-            </div> -->
+
     <div id="loader-wrapper">
         <div class="spinner">
             <div class="double-bounce1"></div>
@@ -388,7 +385,8 @@
     <script src="js/insta.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
+    <script src="js/moving_elements.js"></script>
+    
 
     <script>  
 
@@ -460,83 +458,6 @@
                 } // End if
             });
         })
-    </script>
-    <script>
-        $(document).ready(function () {
-
-            //window and animation items
-            var animation_elements = $.find('.page-text');
-            var web_window = $(window);
-            var animate = true;
-
-            //check to see if any animation containers are currently in view
-            function check_if_in_view() {
-                //get current window information
-                var window_height = web_window.height();
-                var percent_height_top = window_height * 0.2;
-                var percent_height_bottom = window_height * 0.2;
-                var window_top_position = web_window.scrollTop();
-                var window_bottom_position = (window_top_position + window_height);
-
-                //iterate through elements to see if its in view
-                $.each(animation_elements, function () {
-
-                    //get the element sinformation
-                    var element = $(this);
-                    var element_height = $(element).outerHeight();
-                    var element_top_position = $(element).offset().top;
-                    var element_bottom_position = (element_top_position + element_height);
-
-                    //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
-                    if ((element_bottom_position >= (window_top_position + percent_height_top)) && (element_top_position <= (window_bottom_position - percent_height_bottom))) {
-                        element.addClass('in-view');
-                        console.log(animate);
-                        if (animate) {
-                            animate = false;
-                            $('.ml3').each(function () {
-                                $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-                            });
-
-                            anime.timeline({ loop: false })
-                                .add({
-                                    targets: '.ml3 .letter',
-                                    opacity: [0, 1],
-                                    easing: "easeInOutQuad",
-                                    duration: 1250,
-                                    delay: function (el, i) {
-                                        return 150 * (i + 1)
-                                    }
-                                });
-                        }
-                        // setTimeout(function () { element.addClass('in-view'); }, 500);
-                    } else {
-                        element.removeClass('in-view');
-                        animate = true;
-                        // $('.ml3').each(function () {
-                        //     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-                        // });
-
-                        // anime.timeline({ loop: false })
-                        //     .add({
-                        //         targets: '.ml3',
-                        //         opacity: 0,
-                        //         duration: 1000,
-                        //         easing: "easeOutExpo",
-                        //         delay: 1000
-                        //     });
-                    }
-                });
-
-            }
-
-            //on or scroll, detect elements in view
-            $(window).on('scroll resize', function () {
-                check_if_in_view()
-            })
-            //trigger our scroll event on initial load
-            $(window).trigger('scroll');
-
-        });
     </script>
 
 </body>
