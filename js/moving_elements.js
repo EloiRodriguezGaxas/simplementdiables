@@ -1,12 +1,14 @@
 $(document).ready(function () {
 
     //window and animation items
-    var animation_elements = $.find('.page-text');
     var web_window = $(window);
     var animate = true;
 
     //check to see if any animation containers are currently in view
-    function check_if_in_view() {
+    function check_if_in_view(text_to_find) {
+
+        var animation_elements = $.find(text_to_find);
+
         //get current window information
         var window_height = web_window.height();
         var percent_height_top = window_height * 0.2;
@@ -29,13 +31,13 @@ $(document).ready(function () {
                 console.log(animate);
                 if (animate) {
                     animate = false;
-                    $('.ml3').each(function () {
+                    $(text_to_find + ' .ml3').each(function () {
                         $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
                     });
 
                     anime.timeline({ loop: false })
                         .add({
-                            targets: '.ml3 .letter',
+                            targets: text_to_find + ' .ml3 .letter',
                             opacity: [0, 1],
                             easing: "easeInOutQuad",
                             duration: 1250,
@@ -67,7 +69,10 @@ $(document).ready(function () {
 
     //on or scroll, detect elements in view
     $(window).on('scroll resize', function () {
-        check_if_in_view()
+        check_if_in_view('#adults_page_text');
+        check_if_in_view('#diablons_page_text');
+        check_if_in_view('#flamats_page_text');
+        check_if_in_view('#gafarro_page_text');
     })
     //trigger our scroll event on initial load
     $(window).trigger('scroll');
