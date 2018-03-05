@@ -29,7 +29,7 @@
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav id="page_nav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -304,30 +304,30 @@
                 </em>
             </p>
             <aside class="q-question">
-                    <h3>No tinguis por! No mosseguem, només cremem!</h3>
-                    <p>Intentarem respondre el més aviat possible. Moltes gràcies per tot!</p>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSea7rn4cdBaG185aOx2H-k_BGKrkJTAexoq2JqcAJaCxddHrw/formResponse" target="_blank">
-        
-                        <div class="text-center">
-                            <div class="row">
-                                <div class="col-sm-6 form-group">
-                                    <input class="form-control" id="name" name="entry.449687425" placeholder="Nom" type="text" required>
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                    <input class="form-control" id="email" name="entry.507052164" placeholder="Correu" type="email" required>
-                                </div>
+                <h3>No tinguis por! No mosseguem, només cremem!</h3>
+                <p>Intentarem respondre el més aviat possible. Moltes gràcies per tot!</p>
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSea7rn4cdBaG185aOx2H-k_BGKrkJTAexoq2JqcAJaCxddHrw/formResponse" target="_blank">
+
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="entry.449687425" placeholder="Nom" type="text" required>
                             </div>
-                            <textarea class="form-control" id="comments" name="entry.701097584" placeholder="Comentari" rows="5"></textarea>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-12 form-group">
-                                    <button class="btn pull-right" type="submit" style="width:100%;">Enviar</button>
-                                </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="entry.507052164" placeholder="Correu" type="email" required>
                             </div>
                         </div>
-        
-                    </form>
-                </aside>
+                        <textarea class="form-control" id="comments" name="entry.701097584" placeholder="Comentari" rows="5"></textarea>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <button class="btn pull-right" type="submit" style="width:100%;">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </aside>
             <button class="clickr">Contacte!</button>
         </div>
     </div>
@@ -468,6 +468,19 @@
                 } // End if
             });
         })
+    </script>
+    <script>
+        var lastScrollTop;
+        // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+        window.addEventListener("scroll", function () { // or window.addEventListener("scroll"....
+            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+            if (st > lastScrollTop) {
+                $("#page_nav").addClass("nav-up");
+            } else {
+                $("#page_nav").removeClass("nav-up");
+            }
+            lastScrollTop = st;
+        }, false);
     </script>
 
 </body>
