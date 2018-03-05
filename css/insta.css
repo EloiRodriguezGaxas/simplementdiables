@@ -39,6 +39,7 @@
 /* The Modal (background) */
 
 .modal {
+    cursor: url('img/close.png'), default;
     display: none;
     /* Hidden by default */
     position: fixed;

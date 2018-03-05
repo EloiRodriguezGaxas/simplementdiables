@@ -14,14 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
       '</div>' +
     '{{model.customTagClose}}'+
     '<!-- The Modal -->' +
-    '<div id="{{model.customId}}" class="modal">' +
-      '<span onclick="closeModal({{model.customId}})" class="close">&times;</span>' +
-      '<a target="_blank" href="{{link}}">' +
-        '<img src="{{image}}" class="modal-content">' +
-      '</a>' +
-      '<div id="caption">' +
-        '{{caption}}' +
-      '</div>' +
+    '<div onclick="closeModal({{model.customId}})" id="{{model.customId}}" class="modal">' +
+      //'<div onclick="closeModal({{model.customId}})">' +
+        //'<span onclick="closeModal({{model.customId}})" class="close">&times;</span>' +
+        '<a class="modal-content" target="_blank" href="{{link}}">' +
+          '<img style="width: 100%" src="{{image}}">' +
+        '</a>' +
+        '<div id="caption">' +
+          '{{caption}}' +
+        '</div>' +
+      //'</div>' +
     '</div>'
     ;
 
