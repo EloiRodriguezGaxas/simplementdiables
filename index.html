@@ -11,11 +11,8 @@
     <link rel="icon" href="/css/img/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="css/w3.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/nabvar.css">
@@ -28,312 +25,315 @@
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-    <nav id="page_nav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#myPage">SD</a>
+    <div class="main">
+        <nav id="page_nav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#myPage">SD</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#myPage">Inici</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui som?
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#colla">La colla</a>
+                                </li>
+                                <li>
+                                    <a href="#adults">Adults</a>
+                                </li>
+                                <li>
+                                    <a href="#menuts">Menuts</a>
+                                </li>
+                                <li>
+                                    <a href="#malabars">In-Flamats</a>
+                                </li>
+                                <li>
+                                    <a href="#gafarro">Gafarró</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#tour">Media</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contacte</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#myPage">Inici</a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui som?
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#colla">La colla</a>
-                            </li>
-                            <li>
-                                <a href="#adults">Adults</a>
-                            </li>
-                            <li>
-                                <a href="#menuts">Menuts</a>
-                            </li>
-                            <li>
-                                <a href="#malabars">In-Flamats</a>
-                            </li>
-                            <li>
-                                <a href="#gafarro">Gafarró</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#tour">Media</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contacte</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
 
-    <div id="loader-wrapper">
+        <!-- <div id="loader-wrapper">
         <div class="spinner">
             <div class="double-bounce1"></div>
             <div class="double-bounce2"></div>
         </div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div>
+    </div> -->
 
-    <div id="vid" class="container-vid text-center">
-        <div class="cover">
-            <h1 class="w3-center hi ml11">
-                <span class="text-wrapper">
-                    <span class="line line1"></span>
-                    <span class="letters letters1">Simplement</span>
-                    <br>
-                    <span class="letters letters2"> Diables</span>
-                </span>
-            </h1>
-            <div class="tv">
-                <div class="screen mute" id="tv"></div>
+        <div id="vid" class="container-vid text-center">
+            <div class="cover">
+                <h1 class="w3-center hi ml11">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters letters1">Simplement</span>
+                        <br>
+                        <span class="letters letters2"> Diables</span>
+                    </span>
+                </h1>
+                <div class="tv">
+                    <div class="screen mute" id="tv"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
 
-        <h1 class="w3-center w3-padding-large  w3-xxlarge w3-wide w3-animate-opacity hi">SIMPLEMENT DIABLES</h1>
+            <h1 class="w3-center w3-padding-large  w3-xxlarge w3-wide w3-animate-opacity hi">SIMPLEMENT DIABLES</h1>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="css/img/esdeveniments-bg.jpg" alt="New York" width="1200" height="700">
-            </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="css/img/esdeveniments-bg.jpg" alt="New York" width="1200" height="700">
+                </div>
 
-            <div class="item">
-                <img src="css/img/gafarro-bg.jpg" alt="Chicago" width="1200" height="700">
-            </div>
+                <div class="item">
+                    <img src="css/img/gafarro-bg.jpg" alt="Chicago" width="1200" height="700">
+                </div>
 
-            <div class="item">
-                <img src="css/img/menuts-bg.jpg" alt="Los Angeles" width="1200" height="700">
+                <div class="item">
+                    <img src="css/img/menuts-bg.jpg" alt="Los Angeles" width="1200" height="700">
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Contact Parallax Image 
+        <!-- Contact Parallax Image 
     <div id="colla" class="bg-contc w3-display-container w3-opacity-min" style="top: -10px;">
         <div class="w3-display-middle">
             <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">LA COLLA</span>
         </div>
     </div>
 -->
-    <!-- Container (colla Section) -->
-    <div class="container text-center bg-1">
+        <!-- Container (colla Section) -->
 
-        <div class="text-left">
-            <p class="w3-xxlarge w3-wide">
-                Us rebem amb foc i pólvora!
-            </p>
-            <p>
-                Simplement Diables, la colla més diabòlica de Premià de Mar, neix el 1996. Durant tots aquests anys d’història, hem organitzat,
-                gaudit i participat en nombrosos correfocs; una de les festes més tradicionals, emocionants, vibrants i espectaculars
-                del nostre país!
-            </p>
-        </div>
-        <div class="text-right">
-            <p>
-                Els diables de Premià de Mar volem ser una colla referent, i per això us animem a ser partícips dels nostres espectacles
-                i del nostre correfoc encabits dins una de les Festes Majors més populars del Maresme, els "Pirates i Premianencs"!!
-            </p>
-        </div>
-    </div>
+        <div class="container text-center bg-1">
 
-    <!-- Section Diables Adults -->
-    <div id="adults" class="bg-contc w3-display-container">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">DIABLES ADULTS</span>
-        </div>
-    </div>
-
-    <div class="bgimg-adults w3-display-container">
-        <div id="adults_page_text" class="page-text">
-            <div class="section-title">
-                <div style="margin:5%;">
-                    <span class="w3-center ml3">
-                        AQUESTA NIT DORMIREM A L'INFERN
-                    </span>
-                </div>
+            <div class="text-left">
+                <p class="w3-xxlarge w3-wide">
+                    Us rebem amb foc i pólvora!
+                </p>
+                <p>
+                    Simplement Diables, la colla més diabòlica de Premià de Mar, neix el 1996. Durant tots aquests anys d’història, hem organitzat,
+                    gaudit i participat en nombrosos correfocs; una de les festes més tradicionals, emocionants, vibrants
+                    i espectaculars del nostre país!
+                </p>
             </div>
-            <div class="section-text">
-                <div style="margin:5%;">
-                    <span>
-                        Vestits de negre i vermell i capirotxe en punxa porten foc i festa en el correfoc de festa de major i la ceptroada.
-                        <br>
-                        <br> Formada per membres majors d’edat, venen plens de ganes porten la xerinola allà on van.
-                    </span>
-                </div>
+            <div class="text-right">
+                <p>
+                    Els diables de Premià de Mar volem ser una colla referent, i per això us animem a ser partícips dels nostres espectacles
+                    i del nostre correfoc encabits dins una de les Festes Majors més populars del Maresme, els "Pirates i
+                    Premianencs"!!
+                </p>
             </div>
         </div>
-    </div>
 
-    <!-- Section Diablons de Mar -->
-    <div id="menuts" class="bg-contc w3-display-container">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">DIABLONS DE MAR</span>
-        </div>
-    </div>
-
-    <div class="bgimg-menuts w3-display-container">
-        <div id="diablons_page_text" class="page-text">
-            <div class="section-title">
-                <div style="margin:5%;">
-                    <span class="w3-center ml3">
-                        Si no cremem avui, cremarem demà
-                    </span>
-                </div>
-            </div>
-            <div class="section-text">
-                <div style="margin:5%;">
-                    <span>
-                        Vestits de negre i vermell i capirotxe en punxa porten foc i festa en el correfoc de festa de major i la ceptroada.
-                        <br>
-                        <br> Formada per membres majors d’edat, venen plens de ganes porten la xerinola allà on van.
-                    </span>
-                </div>
+        <!-- Section Diables Adults -->
+        <div id="adults" class="bg-contc w3-display-container">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">DIABLES ADULTS</span>
             </div>
         </div>
-    </div>
 
-    <!-- Container (The Malabars Section) -->
-    <div id="malabars" class="bg-contc w3-display-container">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">IN-FLAMATS</span>
-        </div>
-    </div>
-
-    <div class="bgimg-1 w3-display-container">
-        <div id="flamats_page_text" class="page-text">
-            <div class="section-title">
-                <div style="margin:5%;">
-                    <span class="w3-center ml3">
-                        Sempre encesos, mai cremats
-                    </span>
-                </div>
-            </div>
-            <div class="section-text">
-                <div style="margin:5%;">
-                    <span>
-                        Ens agrada el foc, ens agrada la flama! Ens agrada fer-la girar i fer-la saltar! Som els In-flamats, els malabars de foc
-                        de Simplement Diables.
-                        <br>
-                        <br> Assagem els divendres i diumenges als vespres a Can Manent. Anima't, vine i participa!
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Container (The Gafarró Section) -->
-    <div id="gafarro" class="bg-contc w3-display-container">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">Gafarró</span>
-        </div>
-    </div>
-
-    <div class="bgimg-gafarro w3-display-container">
-        <div id="gafarro_page_text" class="page-text">
-            <div class="section-title">
-                <div style="margin:5%;">
-                    <span class="w3-center ml3">
-                        AQUESTA NIT DORMIREM A L'INFERN
-                    </span>
-                </div>
-            </div>
-            <div class="section-text">
-                <div style="margin:5%;">
-                    <span>
-                        El Gafarró es va fer l'any 2006! Amb 85kg de pés, 12 punts de foc i portada per una sola persona a l'interior, no us deixarà
-                        pas indiferents!
-                        <br>
-                        <br> El podreu veure pel correfoc de festa major, la passejada i allà on sigui convidada! Esteu preparats
-                        per ballar sota el foc amb ell??
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Section Media -->
-    <div id="events" class="bg-contc w3-display-container">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">MEDIA</span>
-        </div>
-    </div>
-
-    <!-- Container (Media Section) -->
-    <div id="tour" class="w3-content" style="max-width:1500px">
-        <div id="instafeed-gallery-feed" style="" class="w3-content">
-            <!-- InstaFeed -->
-        </div>
-    </div>
-
-    <!-- Section Contact -->
-    <div id="contact" class="bg-contc w3-display-container">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">CONTACTE</span>
-        </div>
-    </div>
-
-    <!-- Container (Contact Section) -->
-    <div class="w3-content container-contact bg-2">
-
-        <div style="margin:8% 0 8% 0;">
-            <p class="text-center">
-                <em>
-                    Vols un espectacle? Un intercanvi? Entrar en la colla?
-                    <br> T'hi esperem!
-                </em>
-            </p>
-            <aside class="q-question">
-                <h3>No tinguis por! No mosseguem, només cremem!</h3>
-                <p>Intentarem respondre el més aviat possible. Moltes gràcies per tot!</p>
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSea7rn4cdBaG185aOx2H-k_BGKrkJTAexoq2JqcAJaCxddHrw/formResponse" target="_blank">
-
-                    <div class="text-center">
-                        <div class="row">
-                            <div class="col-sm-6 form-group">
-                                <input class="form-control" id="name" name="entry.449687425" placeholder="Nom" type="text" required>
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <input class="form-control" id="email" name="entry.507052164" placeholder="Correu" type="email" required>
-                            </div>
-                        </div>
-                        <textarea class="form-control" id="comments" name="entry.701097584" placeholder="Comentari" rows="5"></textarea>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <button class="btn pull-right" type="submit" style="width:100%;">Enviar</button>
-                            </div>
-                        </div>
+        <div class="bgimg-adults w3-display-container">
+            <div id="adults_page_text" class="page-text">
+                <div class="section-title">
+                    <div style="margin:5%;">
+                        <span class="w3-center ml3">
+                            AQUESTA NIT DORMIREM A L'INFERN
+                        </span>
                     </div>
-
-                </form>
-            </aside>
-            <button class="clickr">Contacte!</button>
+                </div>
+                <div class="section-text">
+                    <div style="margin:5%;">
+                        <span>
+                            Vestits de negre i vermell i capirotxe en punxa porten foc i festa en el correfoc de festa de major i la ceptroada.
+                            <br>
+                            <br> Formada per membres majors d’edat, venen plens de ganes porten la xerinola allà on van.
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Add Google Maps -->
-    <div id="map"></div>
+        <!-- Section Diablons de Mar -->
+        <div id="menuts" class="bg-contc w3-display-container">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">DIABLONS DE MAR</span>
+            </div>
+        </div>
+
+        <div class="bgimg-menuts w3-display-container">
+            <div id="diablons_page_text" class="page-text">
+                <div class="section-title">
+                    <div style="margin:5%;">
+                        <span class="w3-center ml3">
+                            Si no cremem avui, cremarem demà
+                        </span>
+                    </div>
+                </div>
+                <div class="section-text">
+                    <div style="margin:5%;">
+                        <span>
+                            Vestits de negre i vermell i capirotxe en punxa porten foc i festa en el correfoc de festa de major i la ceptroada.
+                            <br>
+                            <br> Formada per membres majors d’edat, venen plens de ganes porten la xerinola allà on van.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container (The Malabars Section) -->
+        <div id="malabars" class="bg-contc w3-display-container">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">IN-FLAMATS</span>
+            </div>
+        </div>
+
+        <div class="bgimg-1 w3-display-container">
+            <div id="flamats_page_text" class="page-text">
+                <div class="section-title">
+                    <div style="margin:5%;">
+                        <span class="w3-center ml3">
+                            Sempre encesos, mai cremats
+                        </span>
+                    </div>
+                </div>
+                <div class="section-text">
+                    <div style="margin:5%;">
+                        <span>
+                            Ens agrada el foc, ens agrada la flama! Ens agrada fer-la girar i fer-la saltar! Som els In-flamats, els malabars de foc
+                            de Simplement Diables.
+                            <br>
+                            <br> Assagem els divendres i diumenges als vespres a Can Manent. Anima't, vine i participa!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Container (The Gafarró Section) -->
+        <div id="gafarro" class="bg-contc w3-display-container">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">Gafarró</span>
+            </div>
+        </div>
+
+        <div class="bgimg-gafarro w3-display-container">
+            <div id="gafarro_page_text" class="page-text">
+                <div class="section-title">
+                    <div style="margin:5%;">
+                        <span class="w3-center ml3">
+                            AQUESTA NIT DORMIREM A L'INFERN
+                        </span>
+                    </div>
+                </div>
+                <div class="section-text">
+                    <div style="margin:5%;">
+                        <span>
+                            El Gafarró es va fer l'any 2006! Amb 85kg de pés, 12 punts de foc i portada per una sola persona a l'interior, no us deixarà
+                            pas indiferents!
+                            <br>
+                            <br> El podreu veure pel correfoc de festa major, la passejada i allà on sigui convidada! Esteu preparats
+                            per ballar sota el foc amb ell??
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Media -->
+        <div id="events" class="bg-contc w3-display-container">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">MEDIA</span>
+            </div>
+        </div>
+
+        <!-- Container (Media Section) -->
+        <div id="tour" class="w3-content" style="max-width:1500px">
+            <div id="instafeed-gallery-feed" style="" class="w3-content">
+                <!-- InstaFeed -->
+            </div>
+        </div>
+
+        <!-- Section Contact -->
+        <div id="contact" class="bg-contc w3-display-container">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">CONTACTE</span>
+            </div>
+        </div>
+
+        <!-- Container (Contact Section) -->
+        <div class="w3-content container-contact bg-2">
+
+            <div style="margin:8% 0 8% 0;">
+                <p class="text-center">
+                    <em>
+                        Vols un espectacle? Un intercanvi? Entrar en la colla?
+                        <br> T'hi esperem!
+                    </em>
+                </p>
+                <aside class="q-question">
+                    <h3>No tinguis por! No mosseguem, només cremem!</h3>
+                    <p>Intentarem respondre el més aviat possible. Moltes gràcies per tot!</p>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSea7rn4cdBaG185aOx2H-k_BGKrkJTAexoq2JqcAJaCxddHrw/formResponse" target="_blank">
+
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="name" name="entry.449687425" placeholder="Nom" type="text" required>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="email" name="entry.507052164" placeholder="Correu" type="email" required>
+                                </div>
+                            </div>
+                            <textarea class="form-control" id="comments" name="entry.701097584" placeholder="Comentari" rows="5"></textarea>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <button class="btn pull-right" type="submit" style="width:100%;">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </aside>
+                <button class="clickr">Contacte!</button>
+            </div>
+        </div>
+
+        <!-- Add Google Maps -->
+        <div id="map"></div>
+    </div>
     <script>
         function initMap() {
             var uluru = { lat: 41.4886734, lng: 2.355015 };
