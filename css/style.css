@@ -21,6 +21,46 @@ h4 {
     display: none;
 }
 
+.arrow-down {
+    z-index: 10 !important;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -webkit-animation: arrow-bounce 1.5s infinite ease-in-out;
+    animation: arrow-bounce 1.5s infinite ease-in-out;
+}
+/*
+    5% {margin-bottom: 3px;}
+    10% {margin-bottom: 3px;}
+    15% {margin-bottom: 3px;}
+    20% {margin-bottom: 3px;}
+    */
+@-webkit-keyframes arrow-bounce {
+    0% { margin-bottom: 0px; }
+    12.5% {margin-bottom: 2.5px;}
+    25% { margin-bottom: 5px; }
+    37.5% { margin-bottom: 7.5px; }
+    50% { margin-bottom: 10px; }
+    62.5% { margin-bottom: 7.5px; }
+    75% { margin-bottom: 5px; }
+    87.5% { margin-bottom: 2.5px; }    
+    100% { margin-bottom: 0px; }
+}
+
+@keyframes arrow-bounce {
+    0% { margin-bottom: 0px; }
+    12.5% {margin-bottom: 2.5px;}
+    25% { margin-bottom: 5px; }
+    37.5% { margin-bottom: 7.5px; }
+    50% { margin-bottom: 10px; }
+    62.5% { margin-bottom: 7.5px; }
+    75% { margin-bottom: 5px; }
+    87.5% { margin-bottom: 2.5px; }    
+    100% { margin-bottom: 0px; }
+}
 
 /* Create a Parallax Effect */
 
@@ -42,28 +82,24 @@ h4 {
     background-image: url("img/menuts-bg.jpg");
     min-height: 80vh;
     position: relative;
-    opacity: 0.8;
 }
 
 .bgimg-gafarro {
     background-image: url("img/gafarro-bg.jpg");
     min-height: 80vh;
     position: relative;
-    opacity: 0.8;
 }
 
 .bgimg-adults {
     background-image: url("img/adults-bg.jpg");
     min-height: 80vh;
     position: relative;
-    opacity: 0.8;
 }
 
 .bgimg-1 {
     background-image: url("img/esdeveniments-bg.jpg");
     min-height: 80vh;
     position: relative;
-    opacity: 0.8;
 }
 
 .page-text {
@@ -191,6 +227,7 @@ h4 {
     width: 100%;
     min-height: 100vh;
     bottom: 0;
+    background: rgb(71, 71, 71);
 }
 
 .carousel-inner img {

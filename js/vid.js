@@ -16,7 +16,7 @@ $('.hi em:last-of-type').html(vid.length);
 
 function onYouTubePlayerAPIReady() {
     console.log("Youtube is ready");
-    if ($(window).width() >= 600) {
+    if ($(window).width() >= 700) {
         $('#myCarousel').hide();
         tv = new YT.Player('tv', { events: { 'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange }, playerVars: playerDefaults });
     } else {
